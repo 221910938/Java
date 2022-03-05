@@ -24,7 +24,7 @@ public class SqlUsuarios extends Conexion {
         PreparedStatement ps =null;
         Connection con = Conexion();
         
-        String sql = "INSERT INTO usuarios (usuario,password,nombre,correo,ultima_sesion,id_tipo) VALUES (?,?,?,?,?,?)";
+        String sql = "INSERT INTO usuarios (usuario,password,nombre,correo,id_tipo) VALUES (?,?,?,?,?)";
         try {
             ps=con.prepareStatement(sql);
             
@@ -32,8 +32,8 @@ public class SqlUsuarios extends Conexion {
             ps.setString(2, usr.getPassword());
             ps.setString(3, usr.getNombre());
             ps.setString(4, usr.getCorreo());
-            ps.setString(5, usr.getUltima_sesion());
-            ps.setInt(6, usr.getId_tipo());
+            //ps.setString(5, usr.getUltima_sesion());
+            ps.setInt(5, usr.getId_tipo());
             
             ps.execute();
             return true;
@@ -82,7 +82,9 @@ public class SqlUsuarios extends Conexion {
     public boolean esMail (String correo) {
 
         //Patron para validar el mail 
-        Pattern pattern= Pattern.compile("^ [_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"+"[A-Za-z0-9-]+(\\.[_A-Za-z0-9-]+)*(\\.[_A-Za-z]{2,})$");
+         Pattern pattern = Pattern
+                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
         Matcher mather= pattern.matcher (correo);
 
         return mather.find();
@@ -95,9 +97,10 @@ public class SqlUsuarios extends Conexion {
 
         Connection con= Conexion();
 
-        String sql = "SELECT id, usuario, password, nombre, id_tipo FROM usuarios WHERE usuario = ? ";
+        String sql = "SELECT id, usuario, password, nombre,correo,ultima_sesion, id_tipo FROM usuarios WHERE usuario = ? ";
 
-        ps=con.prepareStatement (sql); ps.setString (1, usr.getUsuario ());
+        ps=con.prepareStatement (sql); 
+        ps.setString (1, usr.getUsuario ());
 
         rs=ps.executeQuery ();
         try {
@@ -107,14 +110,15 @@ public class SqlUsuarios extends Conexion {
 
         if(usr.getPassword().equals(rs.getString(3))){
             
-            String sqlupdate="UPDATE usuarios WHERE usuario = ?";
+            String sqlupdate="UPDATE usuarios set ultima_sesion = ? WHERE id = ?";
             ps=con.prepareStatement(sqlupdate);
             ps.setString(1, usr.getUltima_sesion());
             ps.setInt(2,rs.getInt(1));
+            ps.execute();
             
             usr.setId(rs.getInt(1));
             usr.setNombre(rs.getString(4));
-            usr.setId_tipo(rs.getInt(5));
+            usr.setId_tipo(rs.getInt(7));
             return true;
             
         }else{
