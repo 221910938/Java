@@ -144,7 +144,9 @@ public class login extends javax.swing.JFrame {
                 mod.setPassword(nuevoPass);
                 
                 if (modSql.Login(mod)) {
+                    
                     inicio.frmlog=null;
+                    
                     this.dispose();
                     
                     Sistema frmSistema = new Sistema();
@@ -157,6 +159,8 @@ public class login extends javax.swing.JFrame {
                 
             } catch (Exception e) {
             }
+        }else{
+        JOptionPane.showMessageDialog(null, "Debe Ingresar Sus Datos");
         }
         
         

@@ -207,8 +207,10 @@ public class Registro extends javax.swing.JFrame {
                             try {
                                 if (modsql.registrar(mod)) {
                                     JOptionPane.showMessageDialog(null, "El usuario se registro correctamente");
+                                    Limpiar();
                                 }else{
                                     JOptionPane.showMessageDialog(null, "Error al registrar");
+                                    Limpiar();
                                 }
                             } catch (SQLException ex) {
                                 Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
@@ -220,6 +222,7 @@ public class Registro extends javax.swing.JFrame {
                         
                     }else{
                         JOptionPane.showMessageDialog(null, "El Usuario ya existe");
+                        Limpiar();
                     }
                 } catch (SQLException ex) {
                     Logger.getLogger(Registro.class.getName()).log(Level.SEVERE, null, ex);
@@ -231,6 +234,14 @@ public class Registro extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_registrarActionPerformed
 
+    private void Limpiar(){
+    txt_usuario.setText("");
+    txt_password.setText("");
+    txt_confirmarpassword.setText("");
+    txt_nombre.setText("");
+    txt_correo.setText("");
+    }
+    
     private void txt_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usuarioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_usuarioActionPerformed
