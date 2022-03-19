@@ -22,9 +22,7 @@ public class inicio extends javax.swing.JFrame {
      */
     public inicio() {
         initComponents();
-        
         setTitle("Ventana Principal de Inicio");
-        
         setLocationRelativeTo(null);
     }
 

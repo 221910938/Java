@@ -28,12 +28,14 @@ import java.util.logging.Logger;
 public class BarrasMySql {
 
     public static void main(String[] args) throws SQLException, FileNotFoundException, DocumentException {
-        PreparedStatement ps = null;
+        PreparedStatement ps ;
         ResultSet rs;
-        Connection con = null;
+        Connection con;
         Image img;
 
         Conexion conn = new Conexion();
+        
+        con = conn.Conexion();
 
         try {
             

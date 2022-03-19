@@ -36,7 +36,7 @@ public class Sistema extends javax.swing.JFrame {
         jMenuItem3 = new javax.swing.JMenuItem();
         menu_proveedor = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 

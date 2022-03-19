@@ -5,6 +5,9 @@
  */
 package vista;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import modelo.Hash;
 import modelo.SqlUsuarios;
@@ -136,6 +139,8 @@ public class login extends javax.swing.JFrame {
         
         SqlUsuarios modSql = new SqlUsuarios();
         Usuarios mod = new Usuarios();
+        Date date = new Date();
+        DateFormat fechaHora=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         
         String pass = new String(txtpassword.getPassword());
         
@@ -147,6 +152,8 @@ public class login extends javax.swing.JFrame {
                 mod.setUsuario(txtusuario.getText());
                 
                 mod.setPassword(nuevoPass);
+                
+                mod.setUltima_sesion(fechaHora.format(date));
                 
                 if (modSql.Login(mod)) {
                     
