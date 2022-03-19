@@ -43,6 +43,11 @@ public class login extends javax.swing.JFrame {
         btn_ingresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
@@ -165,6 +170,10 @@ public class login extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_btn_ingresarActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        inicio.frmlog=null;
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments
