@@ -115,6 +115,7 @@ public class SqlUsuarios extends Conexion {
 
                     String sqlupdate = "UPDATE usuarios set ultima_sesion = ? WHERE id = ?";
                     ps = con.prepareStatement(sqlupdate);
+                    
                     ps.setString(1, usr.getUltima_sesion());
                     ps.setInt(2, rs.getInt(1));
                     ps.execute();

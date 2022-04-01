@@ -27,7 +27,7 @@ import java.util.logging.Logger;
  */
 public class BarrasMySql {
 
-    public static void main(String[] args) throws SQLException, FileNotFoundException, DocumentException {
+    public static void Crear() throws SQLException, FileNotFoundException, DocumentException {
         PreparedStatement ps ;
         ResultSet rs;
         Connection con;
@@ -39,12 +39,12 @@ public class BarrasMySql {
 
         try {
             
-            ps = con.prepareStatement("SELECT * FROM articulos ");
+            ps = con.prepareStatement("SELECT * FROM productos_cafeteria");
             
             rs = ps.executeQuery();
             
             Document doc = new Document();
-            PdfWriter pdf = PdfWriter.getInstance(doc, new FileOutputStream("codigosSql.pdf"));
+            PdfWriter pdf = PdfWriter.getInstance(doc, new FileOutputStream("codigoscafeteria.pdf"));
             doc.open();
 
             Barcode39 code = new Barcode39();
@@ -55,7 +55,6 @@ public class BarrasMySql {
                 img.scalePercent(120);
                 doc.add(img);
                 doc.add(new Paragraph(" "));
-
             }
             
             doc.close();
