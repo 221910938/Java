@@ -5,7 +5,6 @@
  */
 package vista;
 
-import vista.Registro;
 
 /**
  *
@@ -14,7 +13,6 @@ import vista.Registro;
 public class inicio extends javax.swing.JFrame {
     
     public static login frmlog;
-    
     public static Registro frmReg;
     
     /**
@@ -44,8 +42,8 @@ public class inicio extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/WhatsApp Image 2022-02-04 at 7.04.07 PM.png"))); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 160, 180));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Cafe-Transparent-PNG.png"))); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, 200, 200));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -68,7 +66,7 @@ public class inicio extends javax.swing.JFrame {
         });
         getContentPane().add(btn_ingresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 360, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/800px-The.Matrix.glmatrix.2.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cafe.jpg"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 520));
 
         pack();
