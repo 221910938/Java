@@ -27,7 +27,7 @@ public class Conexion {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con=DriverManager.getConnection(this.URl,this.USER,this.PASS);
             if (con!=null) {
-                JOptionPane.showMessageDialog(null, "Conexion Correcta");
+                System.out.println("Conexion Correcta");
             }
         } catch (ClassNotFoundException | SQLException e) {
             JOptionPane.showMessageDialog(null, e);

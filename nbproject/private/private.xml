@@ -3,25 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< Updated upstream
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/modelo/Conexion.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/vista/login.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/vista/Sistema.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/modelo/BarrasMySql.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/modelo/PruebaConexion.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/vista/inicio.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/vista/Registro.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/modelo/SqlUsuarios.java</file>
-            <file>file:/C:/Users/Angel/Documents/NetBeansProjects/Java/src/modelo/CodigoBarras.java</file>
-=======
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/modelo/Usuarios.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/modelo/SqlUsuarios.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/vista/login.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/modelo/Conexion.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/modelo/PruebaConexion.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/vista/inicio.java</file>
-            <file>file:/E:/Users/raton/Documents/NetBeansProjects/administracion82/src/modelo/Hash.java</file>
->>>>>>> Stashed changes
+            <file>file:/home/angel/Documentos/Java/src/modelo/SqlProductos.java</file>
+            <file>file:/home/angel/Documentos/Java/src/vista/Sistema.java</file>
+            <file>file:/home/angel/Documentos/Java/src/modelo/Productos.java</file>
         </group>
     </open-files>
 </project-private>

@@ -54,7 +54,7 @@ public class SqlProductos extends Conexion {
         PreparedStatement ps = null;
         Connection con = Conexion();
 
-        String sql = "INSERT INTO productos_cafeteria (codigo,nombre,precio,cantidad) VALUES (?,?,?,?)";
+        String sql = "INSERT INTO productos_cafeteria (codigo,nombre,precio,cantidad,usable,venta) VALUES (?,?,?,?,?,?)";
         try {
             ps = con.prepareStatement(sql);
 
@@ -62,6 +62,8 @@ public class SqlProductos extends Conexion {
             ps.setString(2, prod.getNombre());
             ps.setInt(3, prod.getPrecio());
             ps.setInt(4, prod.getCantidad());
+            ps.setBoolean(5, prod.getUsable());
+            ps.setBoolean(6, prod.getVenta());
 
             ps.execute();
             return true;
@@ -82,7 +84,7 @@ public class SqlProductos extends Conexion {
         PreparedStatement ps = null;
         Connection con = Conexion();
 
-        String sql = "update productos_cafeteria set codigo=?, nombre=?, precio=?, cantidad=? where codigo=?";
+        String sql = "update productos_cafeteria set codigo=?, nombre=?, precio=?, cantidad=?,usable=?,venta=? where codigo=?";
         try {
             ps = con.prepareStatement(sql);
 
@@ -90,6 +92,8 @@ public class SqlProductos extends Conexion {
             ps.setString(2, prod.getNombre());
             ps.setInt(3, prod.getPrecio());
             ps.setInt(4, prod.getCantidad());
+            ps.setBoolean(3, prod.getUsable());
+            ps.setBoolean(4, prod.getVenta());
 
             ps.setString(5, prod.getCodigo());
             
@@ -144,8 +148,8 @@ public class SqlProductos extends Conexion {
             ps = con.prepareStatement(sql);
             rs = ps.executeQuery();
             while (rs.next()) {
-                Object[] fila = new Object[5];
-                for (int i = 0; i <= 4; i++) {
+                Object[] fila = new Object[7];
+                for (int i = 0; i <= 6; i++) {
                     fila[i] = rs.getObject(i + 1);
                 }
                 data.add(fila);

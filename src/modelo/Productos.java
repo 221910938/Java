@@ -15,6 +15,27 @@ public class Productos {
     private String nombre;
     private int precio;
     private int cantidad;
+    private Boolean usable;
+    private Boolean venta;
+
+    
+
+    public Boolean getUsable() {
+        return usable;
+    }
+
+    public void setUsable(Boolean usable) {
+        this.usable = usable;
+    }
+
+    public Boolean getVenta() {
+        return venta;
+    }
+
+    public void setVenta(Boolean venta) {
+        this.venta = venta;
+    }
+    
 
     public int getId() {
         return id;
